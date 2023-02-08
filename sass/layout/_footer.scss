@@ -1,0 +1,29 @@
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: darken($colour-grey, 70%); 
+    padding-top: 3%;
+    padding-left: 5%;
+    padding-bottom: 5%;
+    line-height: 2%;
+
+&__titre{
+    font-family: 'Shrikhand';
+    color: $colour-white;
+    width: 100%;
+    line-height: 20px;
+}
+&__icon{
+    color: $colour-white;
+    padding-right: 2%;
+    padding-top: 2%;
+}
+&__text{
+    color: $colour-white; 
+    width: 90%;
+    text-decoration: none;
+}
+a{
+    line-height: 20px;  
+}
+}

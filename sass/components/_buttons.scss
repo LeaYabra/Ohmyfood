@@ -1,0 +1,6 @@
+.bouton {
+    @include btn
+}
+.bouton-etape{
+    @include btn-etape;
+}

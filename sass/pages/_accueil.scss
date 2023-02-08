@@ -1,0 +1,55 @@
+.choix{
+    display: flex;
+    flex-wrap: wrap;
+
+.lieu{
+    background-color: $colour-grey;
+    width: 100%;
+    display: flex; 
+    margin-top: 1%;
+
+&__icon{
+   padding-top: 4%;
+   padding-left: 30%;
+   padding-right: 5%;
+}
+}
+.description{
+   padding-bottom: 15%;
+   @include lightness;
+
+&__sous-titre{
+    text-align: center;
+    padding-right: 10%;
+    padding-left: 10%; 
+    padding-bottom: 5%;
+}
+}
+}
+.fonctionnement{
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-bottom: 20%;
+   
+  &__icon-etape{
+    padding-top: 5%;
+    padding-left: 8%;
+    padding-right: 5%;
+    color: darken($colour-grey, 50%);
+    &:hover{
+      color: $colour-primary;
+     }
+}
+   &__chiffre{
+    position: absolute;
+    background-color: $colour-primary;
+    margin-top: 6%;
+    border-radius: 50%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: $colour-white;   
+}
+}
+

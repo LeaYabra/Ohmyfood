@@ -1,0 +1,11 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": " menus de restaurants gastronomiques",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css "
+  },
+  "author": "lea yabra",
+  "license": "ISC"
+}

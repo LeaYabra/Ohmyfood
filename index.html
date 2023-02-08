@@ -9,22 +9,23 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Shrikhand' rel='stylesheet'>
   <link rel="stylesheet" href="public/css/style.css">
+  <!--link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css"-->
   <title>Ohmyfood</title>
 </head>
 
 <body>
   <header class="header">
-    <img src="public\img\logo.png" alt="logo" class="header__logo">
+  <img src="public\img\logo.png" alt="logo" class="header__logo">
   </header>
 
   <section class="choix">
     <div class="lieu">
-      <div class="lieu__icon"> <i class="fa-solid fa-location-dot"></i></div>
+       <i class="fa-solid fa-location-dot"></i>
       <p> Paris, Belleville</p>
     </div>
     <div class="description">
       <h1> Réservez le menu qui vous convient</h1>
-      <p class="description__sous-titre">Decouvrez des restaurants d'exception, sélectionnés par nos soins</p>
+      <p class="description__sous-titre">Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
       <button class="bouton"> Explorer nos restaurants</button>
     </div>
   </section>
@@ -48,7 +49,7 @@
         <h3> Degustez au restaurant</h3>
       </button>
     </section>
-
+   
     <nav class="restaurant">
       <h2> Restaurants</h2>
       <div class="restaurant__carte" onclick="location.href='/laPaletteDuGout.html'">
@@ -57,6 +58,7 @@
         <div class="restaurant__text">
           <div class="restaurant__titre">La palette du goût</div>
           <i class="fa-regular fa-heart"></i>
+          <!--span class="lnr lnr-heart"></span-->
         </div>
         <div class="restaurant__sous-titre"> Ménilmontant</div>
       </div>
@@ -77,11 +79,11 @@
         </div>
         <div class="restaurant__sous-titre"> Cité Rouge</div>
       </div>
-      <div class="restaurant__carte" onclick="location.href='/laDélicesDesSens.html'">
+      <div class="restaurant__carte" onclick="location.href='/leDelicesDesSens.html'">
         <img src="public/img/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" class="restaurant__img" alt="imgRest">
         <div class="restaurant__text">
           <div class="restaurant__titre">Le délice des sens</div>
-          <i i class="fa-regular fa-heart"></i>
+          <i  class="fa-regular fa-heart"></i>
         </div>
         <div class="restaurant__sous-titre"> Folie-Mericourt</div>
       </div>

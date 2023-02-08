@@ -1,3 +1,7 @@
+#footer{
+   position: relative;
+   top: 1010px;
+}
 .footer{
     display: flex;
     flex-wrap: wrap;
@@ -6,7 +10,6 @@
     padding-left: 5%;
     padding-bottom: 5%;
     line-height: 2%;
-
 &__titre{
     font-family: 'Shrikhand';
     color: $colour-white;

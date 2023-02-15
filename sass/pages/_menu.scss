@@ -1,62 +1,100 @@
-.contain{
-display: flex;
+.contain {
+    display: flex;
+    position: relative;
 }
-.imgHeader{
+
+.imgHeader {
+    position: absolute;
     width: 100%;
-    height: 50%;
-} 
-.menu{
+}
+
+.menu {
+    z-index: 5;
     display: flex;
     flex-wrap: wrap;
     margin-top: 55%;
-    position: absolute;
     border-radius: 35px 35px 0px 0px;
     padding-left: 5%;
     padding-bottom: 10%;
     width: 95%;
     line-height: 0%;
     @include lightness;
-   
-&__titre{
-    font-family: "Shrikhand";
-    font-weight: 100;
-    padding-top: 5%;
-    width: 85%;
+    @include desktop{
+        padding-bottom: 5%;
+    }
+    &__titre {
+        font-family: "Shrikhand";
+        font-weight: 100;
+        padding-top: 5%;
+        width: 85%;
+
+        @include desktop {
+            padding-top: 3%;
+            width: 90%;
+        }
+    }
+
+    .fa-heart {
+        padding-top: 8%;
+        width: 10%;
+         @include desktop {
+            padding-top: 4%;
+            }
+        }
+
+    &__sous-titre {
+        border-bottom: solid 3px $colour-green;
+        line-height: 30px;
+        width: 10%;
+        margin-right: 60%;
+
+        @include desktop {
+            width: 3%;
+        }
+    }
 }
-&__sous-titre{
-    border-bottom: solid 3px $colour-green;
-    line-height: 30px;
-    width: 10%;
-    margin-right: 60%;
-}
-}
-.plat{
+
+.plat {
     width: 95%;
-    
-&__titre{
-    font-family: 'Roboto';
-    font-weight: 800;
-    width: 100%;
-    text-align: left;
-    line-height: 30px;
-    padding-left: 2%;
-    font-size: medium;
-}
-&__sous-titre{
-    line-height: 20px;
-    padding-left: 2%;
-    width: 85%;
-    text-align: left;
-    font-size:small;
-    font-weight: 500;
-}
-&__prix{
-   font-size: medium; 
-   font-weight: 700;
-}
-}
-  
 
+    &__titre {
+        font-family: 'Roboto';
+        font-weight: 800;
+        width: 100%;
+        text-align: left;
+        line-height: 30px;
+        padding-left: 2%;
+        font-size: medium;
+        padding-top: 2%;
+    }
 
+    &__sous-titre {
+        line-height: 20px;
+        padding-left: 2%;
+        width: 85%;
+        text-align: left;
+        font-size: small;
+        font-weight: 500;
 
+        @include desktop {
+            width: 93%;
+        }
+    }
 
+    &__prix {
+        font-size: medium;
+        font-weight: 700;
+    }
+}
+.fa-circle-check{
+   font-size: x-large;
+   color: $colour-white;
+   background-color: $colour-green;
+   padding-top: 5%;
+   padding-bottom: 5.5%;
+   padding-left: 4%;
+   padding-right: 4%;
+   border-radius: 0px 15px 15px 0px;
+   position: absolute;
+   margin-left: 280px;
+}

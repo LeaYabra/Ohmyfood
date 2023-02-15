@@ -11,5 +11,8 @@
     "url": "git+https://github.com/LeaYabra/Openclassroom-projet3-Ohmyfood.git"
   },
   "author": "lea yabra",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.58.0"
+  }
 }

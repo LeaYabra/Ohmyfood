@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--meta http-equiv="X-UA-Compatible" content="ie=edge"-->
     <script src="https://kit.fontawesome.com/9ee4474ffb.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Shrikhand' rel='stylesheet'>
@@ -13,7 +12,9 @@
 <body>
     
     <header class="header">
-      <i class="fa-solid fa-arrow-left" onclick="location.href='/index.html'"></i> 
+    <a href="./index.html">
+      <i class="fa-solid fa-arrow-left"></i>
+    </a> 
       <img src="public/img/logo.png" alt="logo" class="header__logo">      
     </header>
 
@@ -27,7 +28,9 @@
     <button class="bouton-repas">
         <div class="plat__titre">Fricassée d'escargot</div>
         <div class="plat__sous-titre"> Au piment d'Espelette </div>
+        <i class="fa-solid fa-circle-check"></i>
         <div class="plat__prix">25€</div>
+      
     </button>
     <button class="bouton-repas">
         <div class="plat__titre">Foie gras de canard mi-cuit</div>
@@ -79,16 +82,15 @@
     <button class="bouton"> Commander</button>
     </div>
 </main>
-<div id="footer">
+
  <footer class="footer">
-    <p class="footer__titre">Ohmyfood </p>
+    <p class="footer__titre">Ohmyfood</p>
     <div class="footer__icon"><i class="fa-solid fa-utensils"></i> </div>
     <p class="footer__text"> Proposer un restaurant</p>
     <div class="footer__icon"><i class="fa-solid fa-handshake-angle"></i> </div>
     <p class="footer__text"> Devenir partenaire</p>
     <p class="footer__text"> Mentions Légales</p>
     <a class="footer__text" href="mailto: contact@ohmyfood.com">Contact</a>
-</footer>
 </div>
 </body>
 </html>

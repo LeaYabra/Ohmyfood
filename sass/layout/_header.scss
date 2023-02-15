@@ -1,15 +1,30 @@
-.header{
+.header {
     margin: 0%;
     width: 100%;
     display: flex;
     padding-top: 5%;
-    padding-bottom: 2%;  
-    box-shadow: 0px 1px 5px 0px darken($colour-grey, 30%); 
-   &__logo{
-       padding-left: 30%;
-   }
+    padding-bottom: 2%;
+    box-shadow: 0px 1px 5px 0px darken($colour-grey, 30%);
+
+    @include desktop {
+        background-color: dark;
+        padding-top: 2%;
+    }
+
+    &__logo {
+        padding-left: 30%;
+
+        @include desktop {
+            padding-left: 41%;
+        }
+    }
 }
-.fa-arrow-left{
+
+.fa-arrow-left {
     position: absolute;
     padding-left: 5%;
- }
+    color: $colour-dark;
+    @include desktop {
+        padding-left: 2%;
+    }
+}

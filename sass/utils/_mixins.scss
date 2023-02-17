@@ -61,6 +61,8 @@
     padding-bottom: 2%;
     margin-bottom: 5%;
     width: 100%;
+    cursor: pointer;
+    @include ombre;
 }
 
 @mixin ombre {
@@ -73,6 +75,16 @@
 
 @mixin desktop {
     @media screen and (min-width: map-get($breakpoints, desktop)) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media only screen and (min-width: 768px) and (max-width: 992px) {
         @content;
     }
 }

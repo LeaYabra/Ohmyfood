@@ -19,9 +19,11 @@
     width: 95%;
     line-height: 0%;
     @include lightness;
-    @include desktop{
+
+    @include desktop {
         padding-bottom: 5%;
     }
+
     &__titre {
         font-family: "Shrikhand";
         font-weight: 100;
@@ -37,10 +39,11 @@
     .fa-heart {
         padding-top: 8%;
         width: 10%;
-         @include desktop {
+
+        @include desktop {
             padding-top: 4%;
-            }
         }
+    }
 
     &__sous-titre {
         border-bottom: solid 3px $colour-green;
@@ -67,34 +70,60 @@
         font-size: medium;
         padding-top: 2%;
     }
+}
 
-    &__sous-titre {
-        line-height: 20px;
-        padding-left: 2%;
-        width: 85%;
-        text-align: left;
-        font-size: small;
-        font-weight: 500;
+.sous-titre {
+    line-height: 20px;
+    padding-left: 2%;
+    width: 80%;
+    text-align: left;
+    font-size: small;
+    font-weight: 500;
 
-        @include desktop {
-            width: 93%;
-        }
-    }
-
-    &__prix {
-        font-size: medium;
-        font-weight: 700;
+    @include desktop {
+        width: 93%;
     }
 }
-.fa-circle-check{
-   font-size: x-large;
-   color: $colour-white;
-   background-color: $colour-green;
-   padding-top: 5%;
-   padding-bottom: 5.5%;
-   padding-left: 4%;
-   padding-right: 4%;
-   border-radius: 0px 15px 15px 0px;
-   position: absolute;
-   margin-left: 280px;
+
+.prix {
+    font-size: medium;
+    font-weight: 700;
+    padding-left: 5%;
+
+    @include tablet{
+      padding-left: 12%;
+    }
+
+    @include desktop {
+        padding-left: 0%;
+    }
 }
+.repas--icon {
+    background-color: $colour-green;
+    padding-top: 5%;
+    padding-bottom: 5.5%;
+    padding-left: 4%;
+    padding-right: 4%;
+    border-radius: 0px 15px 15px 0px;
+    position: absolute;
+    margin-left: 75%;
+    opacity: 0;
+
+    @include desktop {
+        margin-left: 82%;
+        padding-top: 3%;
+        padding-bottom: 2.7%;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    @include tablet{
+        margin-left: 79%;
+        padding-top: 3.5%;
+        padding-bottom: 3.5%;
+    }
+}
+.fa-circle-check {
+    font-size: x-large;
+    color: $colour-white;
+}
+

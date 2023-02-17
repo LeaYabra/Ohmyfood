@@ -1,3 +1,7 @@
+.site-container{
+    position: relative;
+}
+
 .choix {
     display: flex;
     flex-wrap: wrap;
@@ -87,7 +91,7 @@
         color: $colour-white;
 
         @include desktop {
-            margin-top: 5%;
+            margin-top: 2%;
             padding-left: 1.5%;
             padding-right: 1.5%;
             padding-top: 1%;

@@ -1,18 +1,40 @@
+.loader-contain {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  background-color: #ffffff;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  opacity: 1;
+  animation: fadeout 250ms forwards;
+  animation-delay: 3s;
+  transform-origin: bottom;
+  &::after{
+    position: absolute;
+   }
+}
 
-
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 .loader {
   color: $colour-green;
   font-size: 20px;
-  margin: 100px auto;
   width: 1em;
   height: 1em;
   border-radius: 50%;
   position: relative;
-  text-indent:-2em ;
+  text-indent:-2.5em ;
   animation: load 1.3s 150ms ;
   animation-iteration-count:3;
   animation-fill-mode: backwards;
- 
+
 }
 @keyframes load {
 0%,
@@ -41,3 +63,30 @@
     box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
   }
 }
+.menu-anim{
+  animation: affichage 2.3s ;
+  $num-repas: 3;
+  $anim-dur: 800ms;
+  $anim-delay: $anim-dur / $num-repas;
+
+          @for $i from 1 through $num-repas{
+              &--#{$i} {
+                  animation-delay: $anim-delay * $i;
+               }
+          }
+}
+
+@keyframes affichage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+
+  0% { transform:translateY(100%); }
+}
+
+
+ 
+  

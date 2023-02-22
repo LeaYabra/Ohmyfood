@@ -30,7 +30,6 @@
         padding-top: 2%;
 
         @include desktop {
-            padding-right: 1%;
             padding-top: 0.5%;
             padding-left: 1%;
         }
@@ -39,9 +38,9 @@
     &__text {
         color: $colour-white;
         text-decoration: none;
-        width: 90%;
+        width: 88%;
 
-        @include desktop {
+        @include desktop  {
             padding-right: 0%;
             padding-left: 0%;
             width: 22%;
@@ -50,7 +49,6 @@
 
     a {
         line-height: 20px;
-
         @include desktop {
             line-height: 30px;
         }

@@ -24,7 +24,7 @@
   }
 }
 .loader {
-  color: $colour-green;
+  color: $colour-secondary;
   font-size: 20px;
   width: 1em;
   height: 1em;
@@ -86,7 +86,52 @@
 
   0% { transform:translateY(100%); }
 }
+.like{
+  .heart-color{
+      padding-top:20px;
+      font-size: 25px;
+      visibility: hidden;
+      position: absolute;
 
-
+      @include desktop{
+        padding-left: 5%;
+        padding-top:30px;
+      }
+      
+  }
+    .heart-empty {
+     padding-top:20px;
+      font-size: 25px;
+      color: $colour-dark;
+      position: absolute;
+      @include desktop{
+          padding-left: 5%;
+          padding-top:30px;
+        }
+        
+  }
+  &:hover {
+      .heart-empty {
+         visibility: hidden;
+      }
+      .heart-color {
+          visibility: visible;
+          background: $colour-gradient; 
+          background-clip:text;
+          -webkit-background-clip: text;
+          color: transparent;
+          animation: heart 3s;
+       
+      }
+  }
+@keyframes heart {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+}
  
   

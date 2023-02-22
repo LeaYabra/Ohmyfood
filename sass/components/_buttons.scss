@@ -4,6 +4,11 @@
 
 .bouton-etape {
     @include btn-etape;
+    &:hover {
+        .icon-etape{
+        color: $colour-primary;
+    }
+}
 }
 
 .bouton-repas {
@@ -11,15 +16,12 @@
 
     &:hover {
         .prix {
-            transform: translatex(-40px);
+            transform: translatex(-45px);
             transition: transform 150ms ;
             transition-timing-function: ease;
 
-            @include tablet{
-                transform: translatex(-80px);
-            }
             @include desktop {
-                transform: translatex(60px);
+                transform: translateX(20px);
             }
         }
         .sous-titre {

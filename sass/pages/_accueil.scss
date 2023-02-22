@@ -12,7 +12,7 @@
         display: flex;
         margin-top: 1%;
 
-        @include desktop {
+        @include desktop{
             margin-top: 0.2%;
             padding-bottom: 1%;
             padding-top: 1%;
@@ -24,10 +24,10 @@
         padding-left: 30%;
         padding-right: 5%;
 
-        @include desktop {
-            padding-top: 1.5%;
+        @include desktop{
+            padding-top: 1.4%;
             padding-left: 40%;
-            padding-right: 1%;
+            padding-right: 2%;
         }
     }
 
@@ -35,12 +35,11 @@
         padding-bottom: 15%;
         @include lightness;
 
-        @include desktop {
+        @include desktop{
             width: 100%;
             padding-top: 3%;
             padding-bottom: 5%;
         }
-
         &__sous-titre {
             text-align: center;
             padding-right: 10%;
@@ -55,30 +54,12 @@
     padding-left: 5%;
     padding-bottom: 10%;
 
-    @include desktop {
+    @include desktop{
         padding-top: 2%;
         padding-bottom: 2%;
         padding-left: 2%;
         padding-right: 2%;
     }
-
-    &__icon-etape {
-        padding-top: 5%;
-        padding-left: 8%;
-        padding-right: 5%;
-        color: darken($colour-grey, 50%);
-
-        @include desktop {
-            padding-top: 3%;
-            padding-left: 5%;
-            padding-right: 5%;
-        }
-
-        &:hover {
-            color: $colour-primary;
-        }
-    }
-
     &__chiffre {
         position: absolute;
         background-color: $colour-primary;
@@ -90,14 +71,34 @@
         padding-bottom: 1%;
         color: $colour-white;
 
-        @include desktop {
-            margin-top: 2%;
-            padding-left: 1.5%;
-            padding-right: 1.5%;
-            padding-top: 1%;
-            padding-bottom: 1%;
+        @include desktop{
+            margin-top: 5.6%;
+            padding-left: 1%;
+            padding-right: 1%;
+            padding-top: 0.5%;
+            padding-bottom: 0.5%;
             border-radius: 100%;
-            margin-left: 22%;
+            margin-left: 22.5%;
         }
+    }
+}
+.icon-etape {
+    padding-top: 5%;
+    padding-left: 8%;
+    padding-right: 5%;
+    color: darken($colour-grey, 50%);
+
+    @include desktop{
+        padding-top: 3.3%;
+        padding-left: 2%;
+        padding-right: 3%;
+    }
+}
+.text-etape{
+    padding-top: 5%;
+    font-family: 'roboto';
+    font-weight: bold;
+    @include desktop{
+        padding-top: 3.2%;
     }
 }

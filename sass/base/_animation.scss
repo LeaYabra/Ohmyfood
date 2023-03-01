@@ -2,12 +2,12 @@
   position: fixed;
   display: grid;
   place-items: center;
-  background-color: #ffffff;
+  background-color: $colour-white;
   height: 100vh;
   inset: 0;
   z-index: 1;
   opacity: 1;
-  animation: fadeout 250ms forwards;
+  animation: disappear 250ms forwards;
   animation-delay: 3s;
   transform-origin: bottom;
   &::after{
@@ -15,12 +15,12 @@
    }
 }
 
-@keyframes fadeout {
+@keyframes disappear {
   from {
-    opacity: 1;
+    transform: scale(1);
   }
   to {
-    opacity: 0;
+    transform: scale(0);
   }
 }
 .loader {
@@ -86,44 +86,56 @@
 
   0% { transform:translateY(100%); }
 }
-.like{
+.coeur{
+  padding-top:15px;
+  @include desktop{
+    padding-top: 20px;
+  }
+}
+.coeur input[type="checkbox"] {
+  opacity: 1;
+  position: fixed;
+  width: 0;
+}
+.coeur label {
   .heart-color{
-      padding-top:20px;
-      font-size: 25px;
-      visibility: hidden;
-      position: absolute;
+    padding-top:10px;
+    font-size: 25px;
+    visibility: hidden;
+    position: absolute;
 
-      @include desktop{
+    @include desktop{
+      padding-left: 5%;
+      padding-top:10px;
+    }
+    
+}
+  .heart-empty {
+   padding-top:10px;
+    font-size: 25px;
+    color: $colour-dark;
+    position: absolute;
+    @include desktop{
         padding-left: 5%;
-        padding-top:30px;
+        padding-top:10px;
       }
       
-  }
-    .heart-empty {
-     padding-top:20px;
-      font-size: 25px;
-      color: $colour-dark;
-      position: absolute;
-      @include desktop{
-          padding-left: 5%;
-          padding-top:30px;
-        }
-        
-  }
-  &:hover {
-      .heart-empty {
-         visibility: hidden;
-      }
-      .heart-color {
-          visibility: visible;
-          background: $colour-gradient; 
-          background-clip:text;
-          -webkit-background-clip: text;
-          color: transparent;
-          animation: heart 3s;
-       
-      }
-  }
+}
+}
+.coeur input[type="checkbox"]:checked + label {
+  .heart-empty {
+    visibility: hidden;
+ }
+ .heart-color {
+     visibility: visible;
+     background: $colour-gradient-heart; 
+     background-clip:text;
+     -webkit-background-clip: text;
+     color: transparent;
+     animation: heart 3s;
+  
+ }
+}
 @keyframes heart {
   from {
     opacity: 0;
@@ -132,6 +144,6 @@
     opacity: 1;
   }
 }
-}
+
  
-  
+

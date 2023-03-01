@@ -38,11 +38,8 @@
     }
 
     .fa-heart {
-        padding-top: 7%;
-        @include desktop {
-            padding-top: 3%;
-        }     
-    }
+        padding-top: 8%;
+    }     
 
     &__sous-titre {
         border-bottom: solid 3px $colour-tertiary;
@@ -55,7 +52,6 @@
         }
     }
 }
-
 .plat {
     width: 95%;
     &__titre {
@@ -79,7 +75,8 @@
     font-weight: 500;
 
     @include desktop {
-        width: 93%;
+        width: 80%;
+        padding-right: 8%;
     }
 }
 
@@ -87,35 +84,105 @@
     font-size: medium;
     font-weight: 700;
     padding-left: 5%;
-
     @include desktop {
-        padding-left: 0%;
+        padding-left: 10%;  
     }
 }
-.repas--icon {
-    background-color: $colour-tertiary;
-    padding-top: 5.5%;
-    padding-bottom: 5.2%;
-    padding-left: 4%;
-    padding-right: 4%;
-    border-radius: 0px 15px 15px 0px;
-    position: absolute;
-    margin-left: 74%;
-    opacity: 0;
 
-    @include desktop {
-        margin-left:81.3%;
+.check input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+  width:0;
+}
+.check label {
+    background-color: $colour-white;
+    border: none;
+    border-radius: 15px 15px 15px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 2%;
+    margin-bottom: 5%;
+    width: 100%;
+    cursor: pointer;
+    @include ombre;
+    
+    .prix {
+        font-size: medium;
+        font-weight: 700;
+        padding-left: 4%;
         padding-top: 3%;
-        padding-bottom: 26px;
-        padding-left: 3%;
-        padding-right: 3%;
+        position: relative;
+        @include desktop{
+            padding-left: 3%;
+            padding-top: 0.5%;
+        }
+        
+    }
+    .repas--icon {
+        background-color: $colour-tertiary;
+        padding-top: 5.5%;
+        padding-bottom: 5%;
+        padding-left: 4%;
+        padding-right: 4%;
+        border-radius: 0px 15px 15px 0px;
+        position: absolute;
+        margin-left: 76%;
+        opacity: 0;
+    
+        @include desktop {
+            margin-left:81.7%;
+            padding-top: 3%;
+            padding-bottom: 25px;
+            padding-left: 3%;
+            padding-right: 3%;
+        }
+    }
+    .fa-circle-check {
+        font-size: x-large;
+        color: $colour-white;
+        @include desktop{
+            font-size: xx-large;
+        }
     }
 }
-.fa-circle-check {
-    font-size: x-large;
-    color: $colour-white;
-    @include desktop{
-        font-size: xx-large;
-    }
-}
+.check input[type="radio"]:hover + label{
+    .prix {
+        transform: translatex(-45px);
+        transition: transform 150ms ;
+        transition-timing-function: ease;
 
+        @include desktop {
+            transform: translateX(20px);
+        }
+    }
+    .sous-titre {
+        width: 70%;
+        padding-right: 10%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        @include desktop{
+            padding-right: 7%;
+        }    
+    }
+
+    .repas--icon {
+        opacity: 1;
+        transition-duration: 1.5s ;
+        transition-timing-function: ease;   
+    }
+
+    .fa-circle-check {
+        animation: rotation 1s;
+
+        @keyframes rotation {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    }
+
+}

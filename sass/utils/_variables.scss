@@ -4,5 +4,6 @@ $colour-tertiary: #99E2D0;
 $colour-white: #fff;
 $colour-grey: #eaeaea;
 $colour-gradient: linear-gradient($colour-secondary , $colour-primary );
+$colour-gradient-heart: linear-gradient($colour-primary,$colour-secondary);
 $colour-dark: #000000;
 $breakpoints: (desktop: 768px);

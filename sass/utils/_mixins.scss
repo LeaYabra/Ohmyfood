@@ -36,13 +36,8 @@
     @include ombre;
 
     @include desktop  {
-        border-radius: 30px 30px 30px 30px;
-        padding-top: 2%;
-        margin-left: 25%;
-        padding-left: 3%;
-        padding-bottom: 3%;
-        margin-bottom: 5%;
-        width: 50%;
+       border-radius: 30px 30px 30px 30px;
+       padding-top: 5%;
     }
 
     &:hover {
@@ -50,19 +45,6 @@
         box-shadow: 50px 50px 50px $colour-grey;
     }
 
-}
-
-@mixin btn-repas {
-    background-color: $colour-white;
-    border: none;
-    border-radius: 15px 15px 15px 15px;
-    display: flex;
-    flex-wrap: wrap;
-    padding-bottom: 2%;
-    margin-bottom: 5%;
-    width: 100%;
-    cursor: pointer;
-    @include ombre;
 }
 
 @mixin ombre {

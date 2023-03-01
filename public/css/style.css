@@ -160,6 +160,45 @@ h1 {
     opacity: 1;
   }
 }
+.check input[type=radio]:checked + label .prix {
+  transform: translatex(-45px);
+  transition: transform 150ms;
+  transition-timing-function: ease;
+}
+@media screen and (min-width: 768px) {
+  .check input[type=radio]:checked + label .prix {
+    transform: translateX(20px);
+  }
+}
+.check input[type=radio]:checked + label .sous-titre {
+  width: 70%;
+  padding-right: 10%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+@media screen and (min-width: 768px) {
+  .check input[type=radio]:checked + label .sous-titre {
+    padding-right: 7%;
+  }
+}
+.check input[type=radio]:checked + label .repas-icon {
+  opacity: 1;
+  transition-duration: 1.5s;
+  transition-timing-function: ease;
+}
+.check input[type=radio]:checked + label .fa-circle-check {
+  animation: rotation 1s;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .bouton {
   border-radius: 30px 30px 30px 30px;
   margin-left: 22%;
@@ -636,7 +675,7 @@ h1 {
     padding-top: 0.5%;
   }
 }
-.check label .repas--icon {
+.check label .repas-icon {
   background-color: #99E2D0;
   padding-top: 5.5%;
   padding-bottom: 5%;
@@ -648,7 +687,7 @@ h1 {
   opacity: 0;
 }
 @media screen and (min-width: 768px) {
-  .check label .repas--icon {
+  .check label .repas-icon {
     margin-left: 81.7%;
     padding-top: 3%;
     padding-bottom: 25px;
@@ -663,45 +702,6 @@ h1 {
 @media screen and (min-width: 768px) {
   .check label .fa-circle-check {
     font-size: xx-large;
-  }
-}
-
-.check input[type=radio]:hover + label .prix {
-  transform: translatex(-45px);
-  transition: transform 150ms;
-  transition-timing-function: ease;
-}
-@media screen and (min-width: 768px) {
-  .check input[type=radio]:hover + label .prix {
-    transform: translateX(20px);
-  }
-}
-.check input[type=radio]:hover + label .sous-titre {
-  width: 70%;
-  padding-right: 10%;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-@media screen and (min-width: 768px) {
-  .check input[type=radio]:hover + label .sous-titre {
-    padding-right: 7%;
-  }
-}
-.check input[type=radio]:hover + label .repas--icon {
-  opacity: 1;
-  transition-duration: 1.5s;
-  transition-timing-function: ease;
-}
-.check input[type=radio]:hover + label .fa-circle-check {
-  animation: rotation 1s;
-}
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
   }
 }
 

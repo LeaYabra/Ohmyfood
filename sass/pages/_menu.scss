@@ -118,7 +118,7 @@
         }
         
     }
-    .repas--icon {
+    .repas-icon {
         background-color: $colour-tertiary;
         padding-top: 5.5%;
         padding-bottom: 5%;
@@ -145,44 +145,4 @@
         }
     }
 }
-.check input[type="radio"]:hover + label{
-    .prix {
-        transform: translatex(-45px);
-        transition: transform 150ms ;
-        transition-timing-function: ease;
 
-        @include desktop {
-            transform: translateX(20px);
-        }
-    }
-    .sous-titre {
-        width: 70%;
-        padding-right: 10%;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-        @include desktop{
-            padding-right: 7%;
-        }    
-    }
-
-    .repas--icon {
-        opacity: 1;
-        transition-duration: 1.5s ;
-        transition-timing-function: ease;   
-    }
-
-    .fa-circle-check {
-        animation: rotation 1s;
-
-        @keyframes rotation {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-    }
-
-}
